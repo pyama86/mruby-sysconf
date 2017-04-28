@@ -3,6 +3,5 @@
 ##
 
 assert("Sysconf#get") do
-  t = Sysconf._SC_CLK_TCK
-  assert_equal(100, t)
+  assert_equal(100, Sysconf::SC_CLK_TCK)
 end

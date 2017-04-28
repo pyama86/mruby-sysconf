@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/bin/bash -x
 count=0
-cat confname.h | while read line
+cat misc/confname.h | while read line
 do
 echo "#ifdef $line"
-echo "{\"$line\", $count},"
+IFS='='
+set -- $line
+echo "DEF_SYSCONF_CONST($1)"
 echo "#endif"
-count=`expr $count + 1`
 done

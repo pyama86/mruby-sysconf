@@ -13,8 +13,7 @@ end
 ```
 ## example
 ```ruby
-t = Sysconf._SC_CLK_TC
-puts t
+puts Sysconf::SC_CLK_TC
 ```
 
 ## License
